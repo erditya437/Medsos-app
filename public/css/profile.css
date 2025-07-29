@@ -1,0 +1,326 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: #ffffff;
+    color: #333;
+}
+
+
+
+/* Halaman Konten Utama (di kanan sidebar) */
+.main-content {
+    margin-left: 260px; /* sesuaikan dengan lebar sidebar */
+    padding: 20px;
+}
+
+.cover-photo img {
+    width: calc(100% - 280px); /* sesuai sidebar */
+    margin-left: 270px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-top: 30px;
+}
+
+/* Profile Section */
+.profile-section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 700px;
+    margin: 20px auto 0 430px; /* tambahkan margin-left 300px */
+}
+
+/* Profile Photo */
+.profile-photo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-top: -100px;
+    background: #fff;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Profile Info */
+.profile-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-info h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.profile-info p {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+/* Follow Stats */
+.follow-stats {
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #555;
+}
+
+.follow-stats span {
+    margin: 0 10px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #3b82f6;
+    transition: color 0.2s;
+}
+
+.follow-stats span:hover {
+    color: #2563eb;
+}
+
+/* Buttons */
+button {
+    background: #3b82f6;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: #2563eb;
+    transform: scale(1.03);
+}
+
+/* Modal Styling */
+/* Modal Container */
+/* Modal Container */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    padding: 30px;
+}
+
+/* Aktifkan modal saat ada class show */
+.modal.show {
+    display: flex;
+}
+
+/* Modal Content */
+.modal-content {
+    background: rgba(255, 255, 255, 0.267);
+    padding: 25px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 450px;
+    max-height: 90vh;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    position: relative;
+    animation: fadeIn 0.3s ease;
+    overflow-y: auto;
+}
+
+/* Scroll bar custom */
+.modal-content::-webkit-scrollbar {
+    width: 6px;
+}
+.modal-content::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 3px;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+
+.modal-content span {
+    font-size: 20px;
+    color: #888;
+}
+
+.modal-content span:hover {
+    color: #333;
+}
+
+.modal-content h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #3b82f6;
+}
+
+.modal-content form input,
+.modal-content form textarea,
+.modal-content form button {
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.modal-content form input,
+.modal-content form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.modal-content form button {
+    background: #8ae9ff;
+}
+
+.modal-content form button:hover {
+    background: #2d8fff;
+}
+
+/* Followers & Following List */
+#followers-list div,
+#following-list div {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+#followers-list img,
+#following-list img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+    .cover-photo img {
+        height: 180px;
+    }
+    .profile-section {
+        margin-top: 20px;
+    }
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+        margin-top: -60px;
+    }
+    .profile-info h2 {
+        font-size: 22px;
+    }
+    .modal-content {
+        max-width: 90%;
+    }
+}
+
+
+.main-content {
+    margin-left: 260px;
+    padding: 30px;
+    box-sizing: border-box;
+    background: #ffffff;
+    min-height: 90vh;
+}
+
+/* Wrapper Postingan */
+.postingan-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Card Postingan */
+.postingan-item {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.postingan-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Caption */
+.postingan-item a {
+    font-weight: 600;
+    font-size: 15px;
+    color: #1f2937;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    line-height: 1.4;
+    min-height: 50px;
+}
+
+/* Media */
+.postingan-item img,
+.postingan-item video {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Tombol Hapus */
+.postingan-item form {
+    padding: 15px;
+    margin-top: auto;
+}
+
+.postingan-item button {
+    width: 100%;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    border-radius: 30px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #dc2626, #b91c1c);
+    transition: 0.3s;
+}
+
+.postingan-item button:hover {
+    background: linear-gradient(135deg, #b91c1c, #7f1d1d);
+}

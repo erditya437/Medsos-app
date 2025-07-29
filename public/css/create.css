@@ -1,0 +1,153 @@
+/* General Layout */
+body {
+    background: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main content shifting untuk sidebar */
+.main-content {
+    margin-left: 220px; /* mengikuti sidebar width */
+    padding-top: 68px; /* topbar height */
+    padding-right: 20px;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+/* Heading */
+h2 {
+    font-size: 24px;
+    color: #1d4ed8;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form */
+form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Textarea & Select */
+textarea, select {
+    width: 97%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    font-family: inherit;
+    font-size: 14px;
+    resize: vertical;
+}
+
+/* File input */
+input[type="file"] {
+    margin-bottom: 10px;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    background: #1d4ed8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+    background: #3b82f6;
+}
+
+/* Tag selector di halaman create */
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    max-width: calc(100% - 240px);
+    margin-left: 240px;
+}
+
+.tag-item {
+    background: #3d3d3d;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, background 0.3s;
+    white-space: nowrap;
+}
+
+.tag-item:hover {
+    transform: scale(1.05);
+    background: #979797;
+}
+
+.tag-item.active {
+    background: #70e02f;
+    transform: scale(1.05);
+}
+
+/* Form wrapper spacing */
+.form-container {
+    margin-top: 20px;
+}
+
+/* Post Tag di halaman home */
+.caption .tag {
+    display: inline-block;
+    background: #efefef;
+    color: #1d4ed8;
+    font-weight: 600;
+    border-radius: 16px;
+    padding: 5px 12px;
+    margin: 4px 4px 0 0;
+    font-size: 13px;
+    transition: background 0.3s;
+}
+
+.caption .tag:hover {
+    background: #d1e0ff;
+    cursor: default;
+}
+
+/* Tag di sidebar post-info */
+.sidebar-post-tag {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.sidebar-post-tag span {
+    background: #eeeeee;
+    color: #1d4ed8;
+    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+/* Responsive adjustment untuk mobile */
+@media screen and (max-width: 1024px) {
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .tag-list {
+        margin-left: 0;
+        max-width: 100%;
+        justify-content: center;
+    }
+}

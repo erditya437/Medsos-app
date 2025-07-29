@@ -1,0 +1,511 @@
+body {
+    background: #ffffff;
+     font-family: 'Poppins', sans-serif;
+    color: #333;
+     margin: 0;
+    padding: 0;
+}
+
+
+.page-container {
+    max-width: 1024px;
+    margin: 0px auto 0px calc(240px + 20px);
+    padding: 20px;
+    background: #ffffff00;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0);
+    border-radius: 12px;
+}
+
+
+    .title-post {
+        text-align: center;
+        color: #727272;
+        margin-bottom: 20px;
+        margin-left: 200px; /* Adjust for sidebar on the left */
+    }
+
+.post-container {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    width: 500px;
+    max-width: 60vw;
+    padding: 20px;
+}
+
+.post-image, .post-video {
+    display: block;
+    margin: 15px auto 0;
+    max-width: 250px;
+    width: 100%;
+    border-radius: 12px;
+    object-fit: contain;
+}
+
+
+
+.post-container:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+
+.post-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post-info img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #1d4ed8;
+}
+
+.caption {
+    margin-top: 5px;
+}
+
+.tag {
+    background: #e0e7ff;
+    color: #1d4ed8;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.actions {
+    margin-top: 10px;
+    font-size: 16px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Sidebar */
+.sidebar-comment {
+    width: 450px;
+    height: calc(100vh - 68px); /* tinggi sidebar disesuaikan */
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    top: 80px; /* mulai di bawah navbar horizontal */
+    padding: 10px 15px 0 15px;
+    background: #ffffff;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+}
+
+
+#sidebar-comment {
+    display: none;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.actions span,
+.actions button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.actions span {
+    background: #f1f5f9;
+}
+
+.actions span:hover {
+    background: #e0e7ff;
+}
+
+.actions button {
+    background: #787878;
+    color: white;
+}
+
+.actions button:hover {
+    background: #494949;
+    transform: scale(1.05);
+}
+
+
+
+/* Post info tetap fix */
+#sidebar-post-info {
+    flex-shrink: 0;
+    margin-bottom: 5px;
+}
+
+/* Scroll otomatis sisa ruang */
+#sidebar-scroll {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 0;
+}
+
+/* Form komentar nempel bawah */
+#comment-form {
+    flex-shrink: 0;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    background: #fff;
+    min-height: 80px; /* form selalu kelihatan full */
+}
+
+/* Form layout */
+.comment-actions {
+    display: flex;
+    gap: 8px;
+    margin: 0;
+}
+
+.comment-actions textarea {
+    flex: 1;
+    border-radius: 8px;
+    padding: 8px;
+    border: 1px solid #000;
+    min-height: 40px;
+}
+
+/* Tombol upload & submit */
+.btn-upload {
+    background: #3f3f3f;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.btn-submit {
+    background: #0088ff;
+    color: rgb(255, 255, 255);
+    padding: 8px 10px;
+    border: none;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-close {
+    background: #d3030300;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#comment-media {
+    display: none;
+}
+
+
+/* Wrapper postingan */
+.page-container {
+    display: flex;
+    transition: all 0.3s;
+}
+
+.page-container.shifted #posts-wrapper {
+    margin-right: 400px; /* sesuai lebar sidebar */
+}
+
+#posts-wrapper {
+    flex: 1;
+    padding: 20px;
+    transition: margin-right 0.3s;
+}
+
+/* Foto profil komentar tetap bulat */
+.comment-user-photo {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 8px;
+}
+
+/* Foto & video komentar kotak */
+.comment-media-photo,
+.comment-media-video {
+    width: 150px;
+    max-width: 100%;
+    margin-top: 8px;
+    border-radius: 4px;
+    display: block;
+    object-fit: cover;
+}
+
+.comment-media-video {
+    height: auto;
+}
+
+
+
+/* Sidebar bagian post info */
+.sidebar-post-header {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.sidebar-post-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #1d4ed8;
+}
+
+.sidebar-post-details {
+    flex: 1;
+}
+
+.sidebar-post-username {
+    font-size: 18px;
+    color: #1d4ed8;
+    display: block;
+}
+
+.sidebar-post-tag {
+    font-size: 14px;
+    color: #6366f1;
+    margin-left: 5px;
+}
+
+.sidebar-post-caption {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+
+.reply-item {
+    font-size: 13px;
+    margin-left: 30px;
+    margin-top: 8px;
+}
+
+.reply-item img.comment-user-photo {
+    width: 28px;
+    height: 28px;
+    margin-right: 5px;
+}
+
+.reply-item .comment-media-photo,
+.reply-item .comment-media-video {
+    width: 120px;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+
+.story-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 30px 0 30px 280px; /* Adjusted for left sidebar */
+    margin-bottom: 30px;
+    scrollbar-width: none; /* Firefox */
+}
+
+
+.story-container::-webkit-scrollbar {
+    display: none; /* Chrome */
+}
+
+.story-thumbnail {
+    flex: 0 0 auto;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.story-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+.story-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #f43f5e;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin-bottom: 8px;
+}
+
+.story-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.story-username {
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Milik kita selalu di kiri */
+.own-story {
+    order: -1;
+   
+}
+
+
+/* Overlay Full Blur */
+#share-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Modal Box */
+#share-modal > div {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    width: 320px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    animation: fadeInScale 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Animasi Pop Up */
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Judul */
+#share-modal h3 {
+    margin: 0 0 10px;
+    font-size: 22px;
+    color: #2563eb;
+    text-align: center;
+}
+
+/* Daftar User */
+#share-modal div[style*="display:flex"] {
+    background: #f9fafb;
+    border-radius: 10px;
+    padding: 8px 12px;
+    gap: 8px;
+    font-weight: 500;
+    color: #1f2937;
+    transition: background 0.2s;
+}
+
+#share-modal div[style*="display:flex"]:hover {
+    background: #e0f2fe;
+}
+
+/* Checkbox */
+#share-modal input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #2563eb;
+    cursor: pointer;
+}
+
+/* Buttons */
+#share-modal button {
+    padding: 12px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#share-modal button[type="submit"] {
+    background: #22c55e;
+    color: white;
+}
+
+#share-modal button[type="submit"]:hover {
+    background: #16a34a;
+}
+
+#share-modal button[type="button"] {
+    background: #ef4444;
+    color: white;
+}
+
+#share-modal button[type="button"]:hover {
+    background: #dc2626;
+}
+
+
+@media (max-width: 768px) {
+    .sidebar-comment {
+        width: 100%;
+        height: auto;
+        min-height: 60vh;
+        position: fixed;
+        right: 0;
+        left: 0;
+        bottom: -100%;
+        top: auto;
+        transition: bottom 0.4s ease-in-out;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        padding: 20px;
+        box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
+        z-index: 1002;
+    }
+
+    .sidebar-comment.active {
+        bottom: 0;
+    }
+
+    #sidebar-comment {
+        display: block;
+    }
+
+    .page-container.shifted #posts-wrapper {
+        margin-right: 0;
+    }
+
+    #sidebar-scroll {
+        max-height: 50vh;
+        overflow-y: auto;
+    }
+}

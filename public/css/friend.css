@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    margin-left: 200px;
+    min-height: 100vh;
+}
+
+.friend-layout {
+    margin-left: 250px;
+    padding: 30px 30px 30px 50px; /* tambahkan padding-left 50px agar konten tidak terlalu dekat dengan sidebar */
+}
+
+
+.friend-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+.friend-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    min-width: 220px; /* tambahkan properti min-width agar lebar card minimal 220px */
+}
+
+.friend-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.friend-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #eee;
+}
+
+.friend-name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.friend-name small {
+    font-size: 14px;
+    color: #454545;
+}
+
+.friend-name strong {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1f1f1f;
+}
+
+
+.friend-actions {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.friend-actions a,
+.friend-actions form {
+    width: 100%;
+}
+
+.friend-actions button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.friend-actions .chat-btn {
+    background-color: #9f9f9f;
+}
+
+.friend-actions .profile-btn {
+    background-color: #9f9f9f;
+}
+
+.friend-actions .delete-btn {
+    background-color: #900000;
+}
+
+.friend-actions button:hover {
+    opacity: 0.9;
+}
+
+
+/* Container pencarian */
+.search-container h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #1d4ed8;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.search-container p {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+}
+
+/* Card teman */
+.friend-card {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    border: 1px solid #e2e8f0;
+    padding: 14px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s;
+}
+
+.friend-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Foto profil */
+.friend-card img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #3b82f6;
+}
+
+/* Info teman */
+.friend-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.friend-info strong {
+    font-size: 16px;
+    color: #111827;
+}
+
+.friend-info a {
+    font-size: 14px;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.friend-info a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}

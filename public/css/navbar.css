@@ -1,0 +1,291 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff;
+}
+
+nav {
+    width: 220px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 10px;
+}
+
+.logo-container img {
+    width: 55px;
+    height: 55px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.logo-container span {
+    font-size: 22px;
+    font-weight: 700;
+    color: #2b2b2b;
+}
+
+/* Links */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    margin-bottom: 50px;
+}
+
+.logout {
+    color: rgb(255, 255, 255);
+    background: #7a0101;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.logout:hover {
+    background: #3b0202;
+}
+
+ul li a,
+.dropdown-toggle {
+    position: relative;
+    font-weight: 600;
+    color: #333;
+    text-decoration: none;
+    font-size: 20px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Underline Animation */
+ul li a::after,
+.dropdown-toggle::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: #6f6f6f7a;
+    transition: width 0.3s;
+}
+
+ul li a:hover::after,
+.dropdown-toggle:hover::after {
+    width: 100%;
+}
+
+/* Dropdown Container */
+.dropdown {
+    position: relative;
+}
+
+/* Dropdown Toggle Button */
+.dropdown-toggle {
+    all: unset;
+    color: #333;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s;
+}
+
+.dropdown-toggle:hover {
+    color: #2563eb;
+}
+
+
+/* Arrow Rotate Animation */
+.arrow {
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.dropdown.open .arrow {
+    transform: rotate(180deg);
+}
+
+/* Dropdown Content Hidden */
+.dropdown-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 12px;
+    margin-left: 8px;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+/* Dropdown Open */
+.dropdown.open .dropdown-content {
+    max-height: 500px;
+    opacity: 1;
+}
+
+/* Dropdown Link */
+.dropdown-content a {
+    font-size: 15px;
+    font-weight: 500;
+    color: #444;
+    text-decoration: none;
+    position: relative;
+}
+
+.dropdown-content a:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+/* Dropdown Link Underline */
+.dropdown-content a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: #8c8c8cc7;
+    transition: width 0.3s;
+}
+
+.dropdown-content a:hover::after {
+    width: 100%;
+}
+
+
+
+/* Top Bar */
+.top-bar {
+    margin-left: 260px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #ffffff;
+    color: #111827;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo dummy kalau ada */
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 24px;
+    gap: 10px;
+}
+
+/* Search Bar */
+.top-search-bar {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.top-search-bar input {
+    padding: 12px 15px;
+    border-radius: 12px;
+    border: 1px solid #d1d5db;
+    min-width: 300px;
+    outline: none;
+    transition: 0.3s;
+    background: #f9f9f9;
+}
+
+.top-search-bar input:focus {
+    box-shadow: 0 0 8px rgba(37,99,235,0.4);
+    border-color: #2563eb;
+    background: white;
+}
+
+.top-search-bar button {
+    padding: 10px 16px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.top-search-bar button:hover {
+    background: #1e3a8a;
+}
+
+/* Profile di Top Bar */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile-header img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #2563eb;
+}
+
+.profile-header p {
+    margin: 0;
+    font-weight: 600;
+    font-size: 16px;
+    color: #111827;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        overflow-x: auto;
+        position: relative;
+    }
+
+    nav .logo-container {
+        margin-bottom: 0;
+    }
+
+    .top-bar {
+        margin-left: 0;
+        flex-wrap: wrap;
+    }
+
+    .top-search-bar input {
+        min-width: 180px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    nav ul li {
+        margin-bottom: 0;
+    }
+}
