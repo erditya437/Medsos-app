@@ -6,6 +6,7 @@ Orbitalk adalah aplikasi media sosial modern berbasis Laravel 11 yang dirancang 
 Fitur-Fitur 
 Autentikasi & Pengelolaan Akun
 Register & Login manual (tanpa Jetstream).
+<img width="934" height="444" alt="Cuplikan layar 2025-07-27 102351" src="https://github.com/user-attachments/assets/928753b3-4e0d-4fca-9f0e-4fc85bd8ecfa" />
 
 Postingan (Feed)
 Pengguna dapat membuat postingan berupa teks, gambar, atau video.
