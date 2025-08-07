@@ -92,17 +92,12 @@ Orbitalk merupakan platform media sosial lengkap yang menggabungkan:
 Berikut langkah-langkah untuk menjalankan proyek ini secara lokal:
 
 ### 1.Install Dependency
-### 2.Konfigurasi Database
-### 3.Migrasi Tabel
-### 4.jalankan
-### 5.buka di browser
-
 ```bash
 composer install
 npm install
 npm run build
 ```
-
+### 2.Konfigurasi Database
 ```bash
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -112,16 +107,18 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-
+### 3.Migrasi Tabel
 ```bash
 php artisan migrate
 ```
+
+### 4.jalankan
 ```bash
 php artisan serve
 ```
-
+### 5.buka di browser
 ```bash
- http://localhost:8000
+http://localhost:8000
 ```
 
 
