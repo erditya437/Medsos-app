@@ -26,7 +26,7 @@ Orbitalk merupakan platform media sosial lengkap yang menggabungkan:
 <img width="937" height="447" alt="Cuplikan layar 2025-07-27 102754" src="https://github.com/user-attachments/assets/9cb26c88-0ddb-459d-84c0-045a46b2b4b4" />
 
 
-#💡 Fitur-Fitur Utama :
+# 💡 Fitur-Fitur Utama :
    - ✅ Autentikasi & Pengelolaan Akun
    - ✅ Register & Login manual (tanpa Jetstream).
    - ✅ Postingan (Feed)
@@ -37,12 +37,12 @@ Orbitalk merupakan platform media sosial lengkap yang menggabungkan:
    - ✅ Postingan bisa di-share ke pengguna lain via chat internal.
    - ✅ Share masuk ke notifikasi dan chat penerima.
 
-#💬 Komentar:
+# 💬 Komentar:
    - ✅ Pengguna dapat mengirim komentar berupa foto dan vidio.
    - ✅ Pengguna dapat like komentar.
    - ✅ Pengguna dapat membalas komentar.
 
-#🖼️ Story :
+# 🖼️ Story :
    - ✅ Pengguna dapat membuat story, mirip Instagram.
    - ✅ Story hanya muncul jika sudah berteman.
    - ✅ Bisa like story, dan komen story.
@@ -52,34 +52,34 @@ Orbitalk merupakan platform media sosial lengkap yang menggabungkan:
    - ✅ Bisa follow / unfollow pengguna lain.
    - ✅ Ada juga fitur daftar teman (mutual).
 
-#👥 daftar teman bisa:
+# 👥 daftar teman bisa:
    - ✅ Hapus teman
    - ✅ Kirim pesan langsung (chat)
    - ✅ Lihat profil mereka
 
 
-#📨 Fitur Chat:
+# 📨 Fitur Chat:
    - ✅ Chat personal antar pengguna yang sudah berteman.
    - ✅ Kirim teks, gambar, dan video.
    - ✅ Riwayat percakapan tersimpan.
       - Jika seseorang share postingan ke kamu, akan otomatis muncul di chat.
 
 
-#🔔 Notifikasi
+# 🔔 Notifikasi
   - Notifikasi muncul saat:
   -  ✅ Ada permintaan teman
   -  ✅ Like atau komentar di postingan
   -  ✅ like story/komentar story
   -  ✅ share postingan
 
-#🔁 Balasan komentar:
+# 🔁 Balasan komentar:
    - ✅ Like/komen di story
    - ✅ Postingan dibagikan oleh orang lain ke kamu
    - ✅ Notifikasi real-time (via refresh atau polling ringan)
    - ✅ Replies to replies
   
 
-#💻 Teknologi yang Digunakan:
+# 💻 Teknologi yang Digunakan:
    - ✅Framework: Laravel 11
    - ✅Frontend: Blade + HTML + CSS + JavaScript
    - ✅Database: MySQL (users, posts, comments, replies, stories, follows, chats, notifications, tags, likes)
