@@ -1,4 +1,6 @@
- Orbitalk — Aplikasi Media Sosial Interaktif dengan Laravel 11<img width="936" height="442" alt="Cuplikan layar 2025-07-27 102309" src="https://github.com/user-attachments/assets/776c3161-22a5-4c9a-a4b5-72c21ededbdd" />
+ Orbitalk — Aplikasi Media Sosial Interaktif dengan Laravel 11
+ 
+ <img width="936" height="442" alt="Cuplikan layar 2025-07-27 102309" src="https://github.com/user-attachments/assets/776c3161-22a5-4c9a-a4b5-72c21ededbdd" />
 
 Orbitalk adalah aplikasi media sosial modern berbasis Laravel 11 yang dirancang untuk menciptakan ruang interaksi sosial yang fleksibel dan dinamis. Dengan kombinasi fitur-fitur khas media sosial masa kini seperti posting, story, komentar berjenjang, chat, tagar, notifikasi, hingga fitur follow dan daftar teman, Orbitalk memberi pengalaman bersosialisasi digital yang natural dan seru.
 
@@ -6,6 +8,8 @@ Orbitalk adalah aplikasi media sosial modern berbasis Laravel 11 yang dirancang 
 Fitur-Fitur 
 Autentikasi & Pengelolaan Akun
 Register & Login manual (tanpa Jetstream).
+
+
 <img width="934" height="444" alt="Cuplikan layar 2025-07-27 102351" src="https://github.com/user-attachments/assets/928753b3-4e0d-4fca-9f0e-4fc85bd8ecfa" />
 
 Postingan (Feed)
