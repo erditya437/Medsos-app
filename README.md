@@ -87,6 +87,43 @@ Orbitalk merupakan platform media sosial lengkap yang menggabungkan:
    - ✅Routing: Web route + middleware auth
 
 
+## 🚀 Cara Menjalankan Orbitalk
+
+Berikut langkah-langkah untuk menjalankan proyek ini secara lokal:
+
+### 1.Install Dependency
+
+```bash`
+composer install
+npm install
+npm run build
+
+### 2.Konfigurasi Database
+-Buka file .env dan ubah bagian ini:
+
+```bash`
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=medsos_app
+DB_USERNAME=root
+DB_PASSWORD=
+
+### 3.Migrasi Tabel
+
+```bash`
+php artisan migrate
+
+### 4.jalankan
+
+```bash`
+php artisan serve
+
+### 5.buka di browser
+
+```bash
+ http://localhost:8000
+
 
 
 
