@@ -22,6 +22,7 @@ Orbitalk merupakan platform media sosial lengkap yang menggabungkan:
 <img width="934" height="444" alt="Cuplikan layar 2025-07-27 102351" src="https://github.com/user-attachments/assets/928753b3-4e0d-4fca-9f0e-4fc85bd8ecfa" />
 
 
+<img width="937" height="447" alt="Cuplikan layar 2025-07-27 102754" src="https://github.com/user-attachments/assets/9cb26c88-0ddb-459d-84c0-045a46b2b4b4" />
 
 
 💡 Fitur-Fitur Utama :
